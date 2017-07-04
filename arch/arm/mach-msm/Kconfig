@@ -1055,4 +1055,12 @@ config HAS_MACH_MEMUTILS
 	bool "Motorola MSM memcpy enhancements"
 	help
 	Faster memcpy performance for Krait
+
+config FORCE_FAST_CHARGE
+	bool "Force faster charge rate for AC/USB"
+	default y
+	help
+	  This allows users to override default charge rate for both USB and AC
+	  charger input current
+	  
 endif
