@@ -45,16 +45,13 @@ export KBUILD_BUILD_HOST="TheNewBeginning"
 STRIP="/"
 MODULES_DIR=$KERNEL_DIR/arch/arm/boot/AnyKernel2/modules
 echo -e "$green***********************************************"
-echo "                 You are Building The New Brginning  "
+echo "           You are Building The New Beginning  "
 echo -e "***********************************************$nocol"
 
 echo -e "${green}"
 echo "--------------------------------------------------------"
 echo "    Wellcome !!!   Initiatig To Compile R4    "
 echo "--------------------------------------------------------"
-
-compile_phantom ()
-{
 echo -e "$yellow***********************************************"
 echo "          Compiling TNB kernel          "
 echo -e "***********************************************$nocol"
@@ -62,13 +59,11 @@ rm -f $KERN_IMG
 echo -e "$red***********************************************"
 echo "          Cleaning Up Before Compile          "
 echo -e "***********************************************$nocol"
-make clean && make mrproper
 echo -e "$yellow***********************************************"
 echo "          Initialising DEFCONFIG        "
 echo -e "***********************************************$nocol"
 make a6000_defconfig -j6
 gedit .config
-make menuconfig
 echo -e "$yellow***********************************************"
 echo "          Cooking TNB Kernel         "
 echo -e "***********************************************$nocol"
